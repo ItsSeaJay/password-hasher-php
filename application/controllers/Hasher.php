@@ -72,8 +72,8 @@ class Hasher extends CI_Controller {
 	{
 		$html = $this->parser->parse(
 			'form.html', // View
-			$parser_data,
-			TRUE
+			$parser_data, // Data
+			TRUE // Return result as a string
 		);
 
 		return $html;

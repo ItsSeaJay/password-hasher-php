@@ -11,7 +11,20 @@
 		<link rel="apple-touch-icon" href="icon.png">
 		<!-- Place favicon.ico in the root directory -->
 
+		<!-- Stylesheets -->
 		<link rel="stylesheet" href="{base_url}css/normalize.css">
+
+		<!-- Scripts -->
+		<!-- JQuery -->
+		<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<!-- Fallback -->
+		<script>
+			window.jQuery || document.write('<script src="{base_url}js/vendor/jquery.min.js"><\/script>');
+		</script>
+		<!-- Main -->
+		<script src="{base_url}js/main.js"></script>
 	</head>
 	<body>
 		<!--[if lte IE 9]>
