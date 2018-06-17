@@ -25,14 +25,19 @@ class Hasher extends CI_Controller {
 
 		if (isset($_POST['password']))
 		{
+			$password = $_POST['password'];
+			$hash = password_hash($password, PASSWORD_DEFAULT);
 
+			$response['success'] = TRUE;
+			$response['message'] = 'Generated a new password hash';
+			$response['password_hash'] = $hash;
 		}
 		else
 		{
 			$response['message'] = 'No password received from client';
 		}
 
-		$json = json_encode($repsonse);
+		$json = json_encode($response);
 		echo $json;
 	}
 

@@ -19,8 +19,9 @@ type="hidden"
 value="{csrf_hash}">
 
 <form
+id="form"
 action="{base_url}{index_page}/hasher/hash"
 method="POST">
 	<label for="password">Password</label>
-	<input type="password">
+	<input name="password" type="password">
 </form>
