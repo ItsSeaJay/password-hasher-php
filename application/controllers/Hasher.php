@@ -47,20 +47,35 @@ class Hasher extends CI_Controller {
 
 	private function prepare_response()
 	{
-		$response = array(
-			'success' => FALSE,
-			'message' => 'No response message specified',
-			'csrf_hash' => $this->security->get_csrf_hash()
-		);
+		$response = array();
+		$response['success'] = FALSE;
+		$response['message'] = 'No response message specified';
+		$response['csrf_hash'] = $this->security->get_csrf_hash();
+		$response['csrf_token_name'] = $this->security->get_csrf_token_name();
+
+		return $response;
 	}
 
-	public function get_parser_data()
+	private function get_parser_data()
 	{
-		$parser_data = array(
-			'base_url' => base_url(),
-			'index_page' => index_page()
-		);
+		$parser_data = array();
+		$parser_data['base_url'] = base_url();
+		$parser_data['index_page'] = index_page();
+		$parser_data['csrf_hash'] = $this->security->get_csrf_hash();
+		$parser_data['csrf_token_name'] = $this->security->get_csrf_token_name();
+		$parser_data['form'] = $this->get_form($parser_data);
 
 		return $parser_data;
+	}
+
+	private function get_form($parser_data = array())
+	{
+		$html = $this->parser->parse(
+			'form.html', // View
+			$parser_data,
+			TRUE
+		);
+
+		return $html;
 	}
 }

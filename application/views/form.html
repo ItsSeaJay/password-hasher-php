@@ -1,0 +1,28 @@
+<!-- Hidden Inputs -->
+<!-- Base URL -->
+<input
+id="base_url"
+name="base_url"
+type="hidden"
+value="{base_url}">
+<!-- Index Page -->
+<input
+id="index_page"
+name="index_page"
+type="hidden"
+value="{index_page}">
+<!-- CSRF Token -->
+<input
+id="csrf_token"
+name="{csrf_token_name}"
+type="hidden"
+value="{csrf_hash}">
+
+<form
+action="{base_url}{index_page}/hasher/hash"
+method="POST">
+	<label for="password">Password</label>
+	<input type="password">
+
+	<button type="submit">Submit</button>
+</form>
