@@ -56,6 +56,15 @@ footer small {
 	color: gray;
 }
 
+footer a {
+	color: gray;
+}
+
+footer a:hover {
+	color: darkgray;
+	text-decoration: none;
+}
+
 footer .container {
 	background-color: #131313;
 	border: 0;
