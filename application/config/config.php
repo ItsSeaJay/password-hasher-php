@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/password-hasher-php/public/';
+$config['base_url'] = 'http://localhost/phphp/public/';
 
 /*
 |--------------------------------------------------------------------------
@@ -451,7 +451,7 @@ $config['global_xss_filtering'] = FALSE;
 $config['csrf_protection'] = TRUE;
 $config['csrf_token_name'] = 'password_hasher_php_csrf_token';
 $config['csrf_cookie_name'] = 'csrf_cookie_name';
-$config['csrf_expire'] = 7200;
+$config['csrf_expire'] = 3600;
 $config['csrf_regenerate'] = TRUE;
 $config['csrf_exclude_uris'] = array();
 
