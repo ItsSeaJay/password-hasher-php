@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Password Hash PHP</title>
+		<title>PHPHP</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -13,6 +13,8 @@
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="{base_url}css/normalize.css">
+		<link rel="stylesheet" href="{base_url}css/fonts.css">
+		<link rel="stylesheet" href="{base_url}css/main.css">
 
 		<!-- Scripts -->
 		<!-- JQuery -->
@@ -23,9 +25,7 @@
 		<script>
 			window.jQuery || document.write('<script src="{base_url}js/vendor/jquery.min.js"><\/script>');
 		</script>
-		<!-- Debounce -->
 		<script src="{base_url}js/debounce.js"></script>
-		<!-- Main -->
 		<script src="{base_url}js/main.js"></script>
 	</head>
 	<body>
@@ -40,8 +40,27 @@
 			</p>
 		<![endif]-->
 
-		{form}
+		<div class="container">
+			<header>
+				<h1>Password Hasher for PHP Hypertext Preprocessor</h1>
+				<p>
+					Type a password into the form below to hash and salt it:
+				</p>
+			</header>
 
-		<div id="password_hash"></div>
+			{form}
+
+			<!-- Result -->
+			<label for="password_hash">Salted Hash</label>
+			<input 
+			id="password_hash"
+			name="password_hash"
+			disabled="TRUE"></input>
+
+			<footer>
+				<!-- Copyright Notice -->
+				<small>Copyright &copy; Callum John 2018 MIT License</small>
+			</footer>
+		</div>
 	</body>
 </html>
