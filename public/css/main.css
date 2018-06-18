@@ -15,7 +15,7 @@ h4,
 h5,
 h6 {
 	color: #793862; /* Purple */
-	font-family: 'Oxygen', sans-serif;
+	font-family: 'Fira Sans', sans-serif;
 }
 
 p,
@@ -23,7 +23,7 @@ big,
 small,
 label {
 	color: #333333; /* Near Black */
-	font-family: 'Oxygen', sans-serif;
+	font-family: 'Fira Sans', sans-serif;
 }
 
 label {
@@ -36,8 +36,9 @@ input,
 	border: 1px solid gray;
 	margin: 8px;
 	padding: 16px;
-	font-family: 'Oxygen Mono', monospace;
+	font-family: 'Fira Mono', monospace;
 	font-size: 16pt;
+	border-right: 4px solid gray;
 }
 
 #password_hash {
@@ -57,6 +58,7 @@ footer small {
 
 footer .container {
 	background-color: #131313;
+	border: 0;
 }
 
 input {
@@ -68,6 +70,7 @@ input {
 	padding: 32px;
 	margin-left: auto;
 	margin-right: auto;
+	border-right: 4px solid gray;
 	display: block;
 	width: 64%;
 	background-color: #F2F2F2; /* Light Gray */
@@ -80,11 +83,19 @@ button#copy {
 	margin: 8px;
 	background-color: #C4C9DF; /* Steel Blue */
 	border: 1px solid steelblue;
-	font-family: 'Oxygen', sans-serif;
+	border-right: 4px solid steelblue;
+	font-family: 'Fira Sans', sans-serif;
 }
 
 button#copy:focus {
 	color: #F2F2F2; /* Light Gray */
 	background-color: steelblue; /* Steel Blue */
-	font-family: 'Oxygen', sans-serif;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+/* Smaller than a tablet */
+@media (max-width: 750px) {
+	.container {
+		width: 100%;
+	}
 }
