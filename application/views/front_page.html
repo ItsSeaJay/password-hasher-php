@@ -21,7 +21,7 @@
 		<script
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-		<!-- Fallback -->
+		<!-- JQuery Fallback -->
 		<script>
 			window.jQuery || document.write('<script src="{base_url}js/vendor/jquery.min.js"><\/script>');
 		</script>
@@ -52,15 +52,17 @@
 
 			<!-- Result -->
 			<label for="password_hash">Salted Hash</label>
-			<input 
-			id="password_hash"
-			name="password_hash"
-			disabled="TRUE"></input>
+			<p><div 
+			id="password_hash"></div></p>
+			<button
+			id="copy">Copy</button>
+		</div>
 
-			<footer>
+		<footer>
+			<div class="container">
 				<!-- Copyright Notice -->
 				<small>Copyright &copy; Callum John 2018 MIT License</small>
-			</footer>
-		</div>
+			</div>
+		</footer>
 	</body>
 </html>

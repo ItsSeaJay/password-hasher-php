@@ -17,7 +17,7 @@ $(document).ready(function() {
 				// Ensure that the CSRF token is updated
 				$('#csrf_token').val(response.csrf_hash);
 				// Show the password hash to the user
-				$('#password_hash').val(response.password_hash);
+				$('#password_hash').html(response.password_hash);
 			},
 			'JSON' // Data type
 		);
@@ -29,5 +29,18 @@ $(document).ready(function() {
 	}, limit);
 
 	// Whenever someone inputs data into the form
+	// Send a POST request to the database
 	$('#form').on('input', do_request);
+
+	// Whenever someone clicks the copy button
+	// Add the contents of the hash to the clipboard
+	$('button#copy').on('click', function() {
+		// Create a temporary input element
+		var temporary_input = $('<input>');
+		// Add that element to the DOM
+		$('body').append(temporary_input);
+		temporary_input.val($('#password_hash').text()).select();
+		document.execCommand('copy');
+		temporary_input.remove();
+	});
 });

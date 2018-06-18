@@ -1,1 +1,5 @@
+/* This file obtains all necessary fonts from the Google Fonts API */
+/* Oxyen */
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
+/* Oxygen Mono */
+@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono');
